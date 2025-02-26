@@ -1,29 +1,37 @@
-import { View, Text, SafeAreaView, Image, StyleSheet } from 'react-native'
+import { View, Text, SafeAreaView, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { size } from '../config/size'
+
 
 const SeeCard = ({ title, imgUrl }) => {
     return (
 
 
-        <SafeAreaView style={{margin:10}}>
+        <View style={{ margin:10,}}>
+             <TouchableOpacity>
             <View
-        style={{ height: size.getHeightSize(210), 
-            width: size.getWidthSize(150), 
-            borderRadius: 70, backgroundColor:'white'}} >
-<Image source={{
+           
+        style={{ height: size.getHeightSize(220), 
+            width: size.getWidthSize(120), 
+            borderRadius: 70, backgroundColor:'white',  }} >
+               
+            <Image
+            source={{
                     uri: imgUrl
-                }} style={{ height: size.getHeightSize(100), 
-                width: size.getWidthSize(100), 
+                }} style={{ height: size.getHeightSize(90), 
+                width: size.getWidthSize(90), 
                 borderRadius: 70,
-                 marginLeft: 25, flexDirection:'row'}}
+                 marginLeft: 10,}}
                />
+              
             <View >
               
                    <Text>{title}</Text>
             </View>
+           
             </View>
-        </SafeAreaView>
+            </TouchableOpacity>
+        </View>
 
 
     )
