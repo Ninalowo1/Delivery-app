@@ -10,6 +10,7 @@ import UserPage from './src/component/UserPage';
 import HistoryPage from './src/component/HistoryPage';
 import HomePage from './src/component/HomePage';
 import SeeMore from './src/component/SeeMore';
+import UpdateScreen from './src/component/UpdateScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,7 @@ export default function App() {
      <Stack.Screen name="User" component={UserPage}/> 
      <Stack.Screen name="History" component={HistoryPage}/> 
      <Stack.Screen name="SeeMore" component={SeeMore}/> 
+     <Stack.Screen name="Update" component={UpdateScreen}/> 
     </Stack.Navigator>
   </NavigationContainer>
   );
