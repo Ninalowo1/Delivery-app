@@ -1,13 +1,15 @@
 import { View, Text, SafeAreaView, StyleSheet, Image, TouchableOpacity } from 'react-native'
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useContext, useLayoutEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { Feather, FontAwesome } from '@expo/vector-icons'
 import { size } from '../config/size';
 
 
+
 const UserPage = () => {
   const navigation = useNavigation();
-  const [selectedMethod, setSelectedMethod] = useState(null)
+ 
+   const [selectedMethod, setSelectedMethod] = useState(null)
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -24,8 +26,9 @@ const UserPage = () => {
   return (
     <SafeAreaView>
       <View style={{ flexDirection: "row" }}>
-        < Feather name={'chevron-left'} size={25} style={{}} />
-
+        <TouchableOpacity onPress={navigation.goBack} style={{}}>
+        < Feather name={'chevron-left'} size={25} style={{margin:10}} />
+        </TouchableOpacity>
         <View style={{ marginLeft: 90 }}>
           <Text style={{ fontSize: 20, fontWeight: 'bold' }}>My profile</Text>
         </View>
@@ -97,7 +100,9 @@ const UserPage = () => {
         height: size.getHeightSize(55),
         width: size.getWidthSize(300),
         marginLeft: 40,
-        borderRadius: 20
+        borderRadius: 20,
+        marginTop: 50,
+
       }}>
         <TouchableOpacity
           title="Update"
@@ -105,7 +110,8 @@ const UserPage = () => {
           <Text style={{
             marginLeft: 110,
             marginTop: 20,
-            color: '#FFFFFF'
+            color: '#FFFFFF',
+            
           }}>Update</Text>
         </TouchableOpacity>
       </View>

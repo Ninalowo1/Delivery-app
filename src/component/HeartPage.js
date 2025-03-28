@@ -86,8 +86,8 @@ const HeartPage = () => {
         borderRadius: 20
       }}>
         <TouchableOpacity
-          title="Get started"
-          onPress={() => navigation.navigate('Login')}>
+          title="Cart"
+          onPress={() => navigation.navigate('Cart')}>
           <Text style={{
             marginLeft: 110,
             marginTop: 20,

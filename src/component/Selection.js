@@ -4,6 +4,7 @@ import SelectionCard from './SelectionCard'
 
 
 
+
 const Selection = () => {
   return (
    <ScrollView
@@ -17,23 +18,23 @@ const Selection = () => {
   
     {/*SelectionCard*/}
     <SelectionCard
-    imgUrl="https://wallpaperaccess.com/full/767054.jpg"
+    imgUrl="https://theawesomedaily.com/wp-content/uploads/2016/09/pictures-of-pizza-23-1.jpg"
     
-    title="Veggie
-     tomato mix"
+    title="Pizza"
     />
         <SelectionCard
-        imgUrl="https://wallpaperaccess.com/full/767054.jpg"
-    title="Drinks"
+        imgUrl="https://th.bing.com/th/id/R.423965dd29f72e41ee4339de22994aff?rik=%2foDCfFdkLR3F%2fw&riu=http%3a%2f%2fimages6.fanpop.com%2fimage%2fphotos%2f36700000%2fFood-image-food-36721758-2560-1600.jpg&ehk=%2fzz%2bS7VmkplNWZiU3ZZHtYDLgQQxyxgD2SXZVGoUgRk%3d&risl=&pid=ImgRaw&r=0"
+    title="Dessert"
     />
         <SelectionCard
-        imgUrl="https://th.bing.com/th/id/OIP.bejPmWStqSwDGK9HrrG-FwHaFz?rs=1&pid=ImgDetMain"
-    title="Snacks"
+        imgUrl="https://www.theworldbucketlist.com/wp-content/uploads/2021/04/eclairs-2903014-1920-1536x1024.jpg"
+    title="Pastries"
     />
         <SelectionCard
         imgUrl="https://th.bing.com/th/id/OIP.SWVTmBw5LjxWf12Oqgrd4AHaFj?rs=1&pid=ImgDetMain"
     title="Sauce"
     />
+    
    </ScrollView>
   )
 }

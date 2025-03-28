@@ -1,69 +1,61 @@
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet, TextInput} from 'react-native'
+import { View, ScrollView, StyleSheet } from 'react-native'
 import React from 'react'
 import SeeCard from './SeeCard'
-import { size } from '../config/size'
 
-
-
-const SeeItem=   () => {
+const SeeItem = () => {
   return (
-   
-    <ScrollView contentContainerStyle={{flexDirection:'row',  backgroundColor:'#f0ffff',}}>
-
-   <View style={{flexDirection:'column', justifyContent:'space-between',paddingBottom:80, flex:1,}}>
-  <View style={{paddingLeft:80, }}>
-     <Text style={{fontSize:20, fontWeight:'bold'}}> Found 8 items</Text>
-  
-  </View>
- {/*SeeCard*/}
- <SeeCard
-    imgUrl="https://wallpaperaccess.com/full/767054.jpg"
-    
-    title="Veggie
-     tomato mix"
-    />
+    <ScrollView contentContainerStyle={styles.scrollView}>
+      <View style={styles.column}>
         <SeeCard
-        imgUrl="https://wallpaperaccess.com/full/767054.jpg"
-    title="Drinks"
-    />
+          imgUrl="https://simplot-media.azureedge.net/-/media/foundation/recipes/tf_south-african-fried-chicken-with-slap-chips_253.jpg?rev=808c973fe98c430883e5d20cc024edf8&hash=507BDDA5D4E97CAB035854C06E023216"
+          title="Chicken and chips"
+        />
         <SeeCard
-        imgUrl="https://th.bing.com/th/id/OIP.bejPmWStqSwDGK9HrrG-FwHaFz?rs=1&pid=ImgDetMain"
-    title="Snacks"
-    />
+          imgUrl="https://www.theworldbucketlist.com/wp-content/uploads/2021/04/eclairs-2903014-1920-1536x1024.jpg"
+          title="Pastries"
+        />
         <SeeCard
-        imgUrl="https://th.bing.com/th/id/OIP.SWVTmBw5LjxWf12Oqgrd4AHaFj?rs=1&pid=ImgDetMain"
-    title="Sauce"
-    />
-    </View>
-
-    <View style={{paddingTop:80, marginRight:20}}>
-      <SeeCard
-    imgUrl="https://wallpaperaccess.com/full/767054.jpg"
-    
-    title="Veggie
-     tomato mix"
-    />
+          imgUrl="https://th.bing.com/th/id/OIP.r--JtsZAFIm4ETmLxcYL1QHaEo?rs=1&pid=ImgDetMain"
+          title="Semo and soup"
+        />
         <SeeCard
-        imgUrl="https://wallpaperaccess.com/full/767054.jpg"
-    title="Drinks"
-    />
+          imgUrl="https://th.bing.com/th/id/OIP.bejPmWStqSwDGK9HrrG-FwHaFz?rs=1&pid=ImgDetMain"
+          title="Snacks"
+        />
+      </View>
+      <View style={styles.column}>
         <SeeCard
-        imgUrl="https://th.bing.com/th/id/OIP.bejPmWStqSwDGK9HrrG-FwHaFz?rs=1&pid=ImgDetMain"
-    title="Snacks"
-    />
+          imgUrl="https://th.bing.com/th/id/OIP.eWw0kGyREfAvQaMZKYomGwHaE8?rs=1&pid=ImgDetMain"
+          title="Drinks"
+        />
         <SeeCard
-        imgUrl="https://th.bing.com/th/id/OIP.SWVTmBw5LjxWf12Oqgrd4AHaFj?rs=1&pid=ImgDetMain"
-    title="Sauce"
-    />  
-  
-    
-       </View>
-       
-
-
+          imgUrl="https://th.bing.com/th/id/OIP.3tZTI2yR_naPhS5CKOsekAAAAA?rs=1&pid=ImgDetMain"
+          title="Moi-moi"
+        />
+        <SeeCard
+          imgUrl="https://th.bing.com/th/id/OIP.SWVTmBw5LjxWf12Oqgrd4AHaFj?rs=1&pid=ImgDetMain"
+          title="Source"
+        />
+        <SeeCard
+          imgUrl="https://th.bing.com/th/id/OIP.h1wimxZ2pwu68py5kcZhKAHaJ_?rs=1&pid=ImgDetMain"
+          title="Cake"
+        />
+      </View>
     </ScrollView>
-    
   )
 }
+
+const styles = StyleSheet.create({
+  scrollView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 10,
+  },
+  column: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+})
 
 export default SeeItem

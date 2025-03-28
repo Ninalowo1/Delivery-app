@@ -12,19 +12,19 @@ const SeeCard = ({ title, imgUrl }) => {
             <View
            
         style={{ height: size.getHeightSize(220), 
-            width: size.getWidthSize(120), 
+            width: size.getWidthSize(130), 
             borderRadius: 70, backgroundColor:'white',  }} >
                
             <Image
             source={{
                     uri: imgUrl
-                }} style={{ height: size.getHeightSize(90), 
-                width: size.getWidthSize(90), 
+                }} style={{ height: size.getHeightSize(100), 
+                width: size.getWidthSize(100), 
                 borderRadius: 70,
-                 marginLeft: 10,}}
+                 marginLeft: 15,}}
                />
               
-            <View >
+            <View style={{ marginLeft: 20, marginTop: 60 }}>
               
                    <Text>{title}</Text>
             </View>

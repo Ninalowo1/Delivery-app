@@ -2,7 +2,7 @@ import { View, Text, SafeAreaView, StyleSheet, Image, Button, TouchableOpacity }
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { size } from '../config/size'
-
+import { Feather } from '@expo/vector-icons'
 
 const HomeScreen = () => {
     const navigation = useNavigation();
@@ -14,6 +14,7 @@ const HomeScreen = () => {
     }, [])
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#FF4B3A' }}>
+               <View style={{ flexDirection: 'row', justifyContent: 'space-between', padding: 20 }}>
             <View style={{
                 backgroundColor: '#FFFFFF', width: 100,
                 height: size.getHeightSize(100),
@@ -26,6 +27,12 @@ const HomeScreen = () => {
                     style={{ marginTop: 20, }}
                 />
             </View>
+
+        
+        <TouchableOpacity onPress={() => navigation.openDrawer()}>
+          <Feather name="menu" size={30} color="white" />
+        </TouchableOpacity>
+      </View>
 
             <View style={styles.contain}>
                 <Text style={styles.show}>
